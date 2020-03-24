@@ -1,12 +1,7 @@
 <!DOCTYPE html>
 
-<?php
-  $mysqli = new mysqli_connect('js.ccpttnayn2zz.us-west-1.rds.amazonaws.com','admin','deshammu01','Todo');
-  if ($mysqli -> connect_errno) {
-  echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
-  exit();
-  ?>
-}
+
+
 
 <html lang="en" dir="ltr">
 
@@ -19,13 +14,9 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     </head>
     <body>
-      <?php
-      $query = "SELECT * FROM `list`;";
-             $result = mysqli_query($db, $query);
-             while($row = mysqli_fetch_assoc($result));
-      ?>
+
         <div class="container">
-            <form>
+            <form method = "post" action= "todoserver.php">
               <div class="form-group">
                 <label for="myLogin">Login</label>
                 <input  class="form-control" id="myLogin" aria-describedby="Login">
